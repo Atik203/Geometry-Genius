@@ -1,9 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="m-10">
+      <div class="navbar bg-[#1090D819] h-28 rounded-lg">
+        <div class="flex-1 text-left pl-1 lg:pl-5">
+          <h3 class="text-2xl lg:text-4xl text-[#111111CC] font-bold">
+            Interactive <br />
+            <span class="text-xl lg:text-3xl text-[#11111199] font-medium"
+              >Geometry Genius</span
+            >
+          </h3>
+        </div>
+        <div class="flex-none pr-1 lg:pr-8">
+          <button
+            class="btn btn-primary bg-[#1090D8] text-white font-bold border-none w-28"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="w-[90%] mx-auto">
+      <!-- container  -->
+      <div class="flex flex-col lg:flex-row">
+        <!-- shape container -->
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- first card -->
+          <div class="card card-compact bg-base-100 mt-5">
+            <figure>
+              <img src="images/triangle.png" alt="Triangle" />
+            </figure>
+            <div class="card-body mt-10">
+              <h2 class="text-center font-bold text-2xl mt-3">Triangle</h2>
+              <p class="text-center text-base font-normal">
+                Area (A) = 0.5 x b x h
+              </p>
+              <p class="text-center mt-3 mb-5">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="b"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="h"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+              </p>
+              <div class="card-actions justify-center">
+                <button
+                  class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- second card -->
+          <div class="card card-compact bg-base-100 mt-5">
+            <figure>
+              <img src="images/rectangle.png" alt="Triangle" />
+            </figure>
+            <div class="card-body mt-10">
+              <h2 class="text-center font-bold text-2xl mt-3">Rectangle</h2>
+              <p class="text-center text-base font-normal">Area (A) = w x l</p>
+              <p class="text-center mt-3 mb-5">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="w"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="l"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+              </p>
+              <div class="card-actions justify-center">
+                <button
+                  class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- third card -->
+          <div class="card card-compact bg-base-100 mt-5">
+            <figure>
+              <img src="images/parallelogram.png" alt="Triangle" />
+            </figure>
+            <div class="card-body mt-10">
+              <h2 class="text-center font-bold text-2xl mt-3">Parallelogram</h2>
+              <p class="text-center text-base font-normal">Area (A) = b x h</p>
+              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
+                b=10cm, h=12cm
+              </p>
+              <div class="card-actions justify-center">
+                <button
+                  class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- fourth card -->
+          <div class="card card-compact bg-base-100 mt-5">
+            <figure>
+              <img src="images/rhombus.png" alt="Triangle" />
+            </figure>
+            <div class="card-body mt-10">
+              <h2 class="text-center font-bold text-2xl mt-3">Rhombus</h2>
+              <p class="text-center text-base font-normal">
+                Area (A) = 0.5 x d1 x d2
+              </p>
+              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
+                d1=10cm, d2=12cm
+              </p>
+              <div class="card-actions justify-center">
+                <button
+                  class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- fifth card -->
+          <div class="card card-compact bg-base-100 mt-5">
+            <figure>
+              <img src="images/pentagon.png" alt="Triangle" />
+            </figure>
+            <div class="card-body mt-10">
+              <h2 class="text-center font-bold text-2xl mt-3">Pentagon</h2>
+              <p class="text-center text-base font-normal">
+                Area (A) = 0.5 x p x b
+              </p>
+              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
+                p = 6cm, b = 10cm
+              </p>
+              <div class="card-actions justify-center">
+                <button
+                  class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- sixth card -->
+          <div class="card card-compact bg-base-100 mt-5">
+            <figure>
+              <img src="images/ellipse.png" alt="Triangle" />
+            </figure>
+            <div class="card-body mt-10">
+              <h2 class="text-center font-bold text-2xl mt-3">Ellipse</h2>
+              <p class="text-center text-base font-normal">
+                Area (A) =
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="12"
+                  viewBox="0 0 16 12"
+                  fill="none"
+                  class="inline"
+                >
+                  <path
+                    d="M15.1102 1.73103C15.6006 1.73197 15.999 1.3488 16 0.875317C16.0007 0.401836 15.6041 0.0172503 15.1136 0.0163071L6.23256 0.000272915C4.39578 -0.00302828 2.31254 -0.00680105 0.272293 1.95527C-0.0811408 2.28373 -0.091888 2.8263 0.248112 3.1675C0.588357 3.5087 1.15038 3.51931 1.50382 3.19085C1.51139 3.18401 1.51872 3.17717 1.5258 3.16986C2.48376 2.22172 3.80639 1.70014 5.17812 1.72961L3.55896 11.0002C3.47714 11.4664 3.80224 11.9083 4.28488 11.9873C4.28562 11.9873 4.28635 11.9875 4.28733 11.9875C4.33593 11.996 4.38527 12 4.43486 12C4.86841 11.9998 5.23845 11.6975 5.31026 11.2848L6.98144 1.71641L10.6697 1.72301L10.6545 9.43924C10.6027 10.6015 11.3961 11.6418 12.5612 11.9394C12.7189 11.9726 12.8802 11.9894 13.0416 11.9889C13.7631 11.9901 14.9783 11.6741 15.8957 9.81722C16.1089 9.39114 15.9238 8.87875 15.4824 8.6729C15.0411 8.46705 14.5105 8.64578 14.2973 9.07187C14.2963 9.07376 14.2954 9.07564 14.2944 9.07753C13.8069 10.0625 13.2651 10.3331 12.9549 10.2674C12.6085 10.1365 12.3946 9.79954 12.4307 9.44254L12.4459 1.72631L15.1102 1.73103Z"
+                    fill="#414141"
+                  />
+                </svg>
+                ab
+              </p>
+              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
+                a = 10cm, b = 4cm
+              </p>
+              <div class="card-actions justify-center">
+                <button
+                  class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- area calculator -->
+        <div class="w-[420px] mt-5">
+          <h4 class="text-xl font-bold underline text-center">
+            Area Calculation
+          </h4>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
