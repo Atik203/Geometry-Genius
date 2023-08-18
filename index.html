@@ -38,7 +38,7 @@
         </div>
       </div>
     </header>
-    <main class="w-[90%] mx-auto">
+    <main class="w-[95%] mx-auto">
       <!-- container  -->
       <div class="flex flex-col lg:flex-row">
         <!-- shape container -->
@@ -59,7 +59,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="base"
                   class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
                   placeholder="b"
                 />
@@ -69,7 +69,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="height"
                   class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
                   placeholder="h"
                 />
@@ -79,6 +79,7 @@
               </p>
               <div class="card-actions justify-center">
                 <button
+                  onclick="triangleArea()"
                   class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
                 >
                   Calculate
@@ -98,7 +99,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="width"
                   class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
                   placeholder="w"
                 />
@@ -108,7 +109,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="length"
                   class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
                   placeholder="l"
                 />
@@ -118,6 +119,7 @@
               </p>
               <div class="card-actions justify-center">
                 <button
+                  onclick="rectangleArea()"
                   class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
                 >
                   Calculate
@@ -133,11 +135,31 @@
             <div class="card-body mt-10">
               <h2 class="text-center font-bold text-2xl mt-3">Parallelogram</h2>
               <p class="text-center text-base font-normal">Area (A) = b x h</p>
-              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
-                b=10cm, h=12cm
+              <p class="text-center mt-3 mb-5">
+                <input
+                  type="text"
+                  name=""
+                  id="para-base"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="b"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="para-height"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="h"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
               </p>
               <div class="card-actions justify-center">
                 <button
+                  onclick="ParallelogramArea()"
                   class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
                 >
                   Calculate
@@ -155,11 +177,31 @@
               <p class="text-center text-base font-normal">
                 Area (A) = 0.5 x d1 x d2
               </p>
-              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
-                d1=10cm, d2=12cm
+              <p class="text-center mt-3 mb-5">
+                <input
+                  type="text"
+                  name=""
+                  id="side1"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="d1"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="side2"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="d2"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
               </p>
               <div class="card-actions justify-center">
                 <button
+                  onclick="RhombusArea()"
                   class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
                 >
                   Calculate
@@ -177,11 +219,31 @@
               <p class="text-center text-base font-normal">
                 Area (A) = 0.5 x p x b
               </p>
-              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
-                p = 6cm, b = 10cm
+              <p class="text-center mt-3 mb-5">
+                <input
+                  type="text"
+                  name=""
+                  id="side-a"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="p"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="side-b"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="b"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
               </p>
               <div class="card-actions justify-center">
                 <button
+                  onclick="pentagonArea()"
                   class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
                 >
                   Calculate
@@ -213,11 +275,31 @@
                 </svg>
                 ab
               </p>
-              <p class="text-center mt-3 mb-5 text-xl text-[#111111CC]">
-                a = 10cm, b = 4cm
+              <p class="text-center mt-3 mb-5">
+                <input
+                  type="text"
+                  name=""
+                  id="ellipse-a"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="a"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="ellipse-b"
+                  class="w-20 h-8 pl-2 text-black bg-[#F1F1F1] rounded-md"
+                  placeholder="b"
+                />
+                <span class="text-base font-normal text-center ml-2 mr-3"
+                  >cm</span
+                >
               </p>
               <div class="card-actions justify-center">
                 <button
+                  onclick="ellipseArea()"
                   class="btn text-white h-[50px] w-72 font-bold text-xl btn-primary rounded-lg border-none bg-[#1090D8]"
                 >
                   Calculate
@@ -235,5 +317,7 @@
         </div>
       </div>
     </main>
+
+    <script src="calculate.js"></script>
   </body>
 </html>
